@@ -1,0 +1,8 @@
+:root {
+    --text-default-size: 16px;
+    --text-default-colour: #333;
+    --text-contrast-colour: #fff;
+
+    --page-background: #f5f3f6;
+    --brand-highlight: #9479fe;
+}

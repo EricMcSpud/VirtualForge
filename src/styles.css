@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+@import "assets/styles/vars.css";
+@import "assets/styles/layout.css";
+
+@font-face {
+    font-family: MontserratThin;
+    src: url(assets/fonts/Montserrat-Thin.ttf);
+}
+@font-face {
+    font-family: MontserratLight;
+    src: url(assets/fonts/Montserrat-Light.ttf);
+}
+@font-face {
+    font-family: MontserratRegular;
+    src: url(assets/fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+    font-family: MontserratMedium;
+    src: url(assets/fonts/Montserrat-Medium.ttf);
+}
+@font-face {
+    font-family: MontserratBold;
+    src: url(assets/fonts/Montserrat-Bold.ttf);
+}

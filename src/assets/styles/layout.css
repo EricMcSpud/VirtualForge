@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "MontserratRegular", Arial, sans-serif;
+    font-size: var(--text-default-size);
+    color: var(--text-default-colour);
+    background: var(--page-background) url(/assets/images/page-background.jpeg) center 96px repeat-x;
+    background-size: auto 298px;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.pageConstraint {
+    max-width: 1376px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pageFooter {
+    margin-top: 8px;
+    margin: 0 95px;
+    display: flex;
+    align-items: center;
+    line-height: 20px;
+}

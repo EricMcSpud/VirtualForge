@@ -1,0 +1,54 @@
+.pageHeader {
+    display: flex;
+    align-items: center;
+    min-height: 96px;
+    margin: 0 95px;
+    font-family: MontserratMedium;
+}
+.headerItem {
+    flex-grow: 1;
+    display: flex;
+}
+.leftItem {
+    justify-content: flex-start;
+}
+.rightItem {
+    justify-content: flex-end;
+}
+
+.brandContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 154px;
+    height: 34px;
+    box-sizing: border-box;
+    border: 2px solid var(--brand-highlight);
+}
+.brandExt {
+    font-size: 0.9rem;
+}
+
+.shoppingTotals {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 154px;
+    height: 36px;
+    box-sizing: border-box;
+    text-align: right;
+}
+.totalSpend {
+    margin-right: 16px;
+}
+.totalItems {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background-color: var(--brand-highlight);
+    color: var(--text-contrast-colour);
+}
