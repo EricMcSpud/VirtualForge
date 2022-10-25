@@ -2,7 +2,14 @@
     --text-default-size: 16px;
     --text-default-colour: #333;
     --text-contrast-colour: #fff;
+    --text-faint-colour: #666;
+
+    --brand-highlight: #9479fe;
 
     --page-background: #f5f3f6;
-    --brand-highlight: #9479fe;
+    --card-background: white;
+    --card-contrast-background: #e6e4e7;
+    --card-shadow: 0px 0px 16px #ccc;
+
+    --button-background: #e6e4e7;
 }

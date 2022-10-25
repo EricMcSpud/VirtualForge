@@ -1,19 +1,18 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subject, Subscription } from 'rxjs';
 
-import { CartService } from 'src/app/shopping/cart/cart.service';
-import { ProductModel } from '../models/product-model';
-import { CartUtils } from '../utils/cart-utils';
-
-const DEFAULT_VARIANT_INDEX = 0;
+import { CartService } from '../cart.service';
+import { ProductModel } from 'src/app/common/models/product-model';
+import { CartUtils } from 'src/app/common/utils/cart-utils';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  selector: 'app-product-cart',
+  templateUrl: './product-cart.component.html',
+  styleUrls: ['./product-cart.component.css']
 })
-export class HeaderComponent implements OnInit, OnDestroy {
+export class ProductCartComponent implements OnInit, OnDestroy {
 
+  currentCartProducts: Array<ProductModel> = new Array<ProductModel>();
   currentCartQuantity: number = 0;
   currentCartValue: number = 0;
 
@@ -29,6 +28,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
         if ( products) {
           this.currentCartQuantity = products.length;
           this.currentCartValue = CartUtils.calculateCartValue( products);
+          this.currentCartProducts = products;
         }
       },
       error: (err: Error) => {
@@ -38,6 +38,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.cartSubscription?.unsubscribe();
+  }
+
+  onRemoveProduct( productId: number): void {
+    this.cartService.removeProduct( productId);
   }
 
 }

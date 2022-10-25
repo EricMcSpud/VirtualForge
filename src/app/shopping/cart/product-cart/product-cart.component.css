@@ -1,0 +1,104 @@
+.cartContainer {
+    width: 318px;
+    padding: 22px;
+    box-sizing: border-box;
+    border-top: 4px solid var(--brand-highlight);
+    box-shadow: var(--card-shadow);
+    background-color: var(--card-background);
+}
+
+.cartContainer > .titleContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 48px;
+}
+.cartTitle {
+    font-family: MontserratMedium;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    margin-right: 16px;
+}
+.totalItems {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background-color: var(--brand-highlight);
+    font-family: MontserratSemiBold;
+    color: var(--text-contrast-colour);
+}
+
+.productListContainer {
+    margin-left: 12px;
+    margin-bottom: 164px;
+}
+.productDescriptionContainer {
+    display: flex;
+    align-items: flex-start;
+    font-family: MontserratSemiBold;
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+}
+.productDescription {
+    flex-grow: 1;
+}
+.productPrice {
+    width: 64px;
+    min-width: 64px;
+}
+
+.productVariantContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 38px;
+}
+.productVariant {
+    flex-grow: 1;
+    color: var(--brand-highlight);
+    font-size: 0.9rem;
+}
+.productActionButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 28px;
+    width: 64px;
+    min-width: 64px;
+    box-sizing: border-box;
+    font-size: 0.6rem;
+    font-family: MontserratMedium;
+    text-transform: uppercase;
+    background-color: var(--button-background);
+    cursor: pointer;
+}
+
+.cartTotalContainer {
+    display: flex;
+    align-items: center;
+    height: 78px;
+    box-sizing: border-box;
+    padding: 16px;
+    background-color: var(--card-contrast-background);
+}
+.cartTotalContainer > .totalTitlesContainer {
+    flex-grow: 1;
+    font-size: 0.9rem;
+}
+.totalTitle {
+    margin-bottom: 8px;
+    font-family: MontserratSemiBold;
+}
+.totalSubtitle {
+    color: var(--text-faint-colour);
+}
+.cartTotalsContainer > .totalValueContainer {
+    width: 64px;
+    min-width: 64px;
+}
+.totalValue {
+    font-size: 1.7rem;
+    font-family: MontserratMedium;
+}

@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  productUrl: 'https://efuktshirts.com/products.json'
 };

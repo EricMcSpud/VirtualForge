@@ -1,0 +1,29 @@
+.summaryContainer {
+    width: 316px;
+    height: 488px;
+    box-sizing: border-box;
+    padding: 22px;
+    margin: 0 36px 32px 0;
+    box-shadow: var(--card-shadow);
+    background-color: var(--card-background);
+}
+
+.buttonContainer {
+    display: flex;
+    height: 74px;
+}
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.action {
+    color: var(--text-contrast-colour);
+    background-color: var(--brand-highlight);
+}
+.view {
+    background-color: var(--button-background);
+}

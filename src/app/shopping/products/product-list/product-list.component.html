@@ -1,0 +1,18 @@
+<div class="contentContainer">
+    <div class="main">
+        <div class="sortContainer">
+            <select name="sortBy" (change)="onSortByChanged($event);">
+                <option value="priceHigh">Highest Price</option>
+                <option value="priceLow">Lowest Price</option>
+                <option value="alphaAZ">Title - A to Z</option>
+                <option value="alphaZA">Title - Z to A</option>
+            </select>
+        </div>
+        <div class="listContainer">
+            <app-product-summary *ngFor="let product of availableProducts;" [product]="product"></app-product-summary>
+        </div>
+    </div>
+    <div class="aside">
+        <app-product-cart></app-product-cart>
+    </div>
+</div>

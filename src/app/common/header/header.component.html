@@ -6,8 +6,8 @@
     </div>
     <div class="headerItem rightItem">
         <div class="shoppingTotals">
-            <div class="totalSpend">{{ 20 | currency: '£'}}</div>
-            <div class="totalItems">3</div>
+            <div class="totalSpend">{{ currentCartValue | currency: '£' }}</div>
+            <div class="totalItems">{{ currentCartQuantity }}</div>
         </div>
     </div>
 </div>

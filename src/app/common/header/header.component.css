@@ -2,8 +2,8 @@
     display: flex;
     align-items: center;
     min-height: 96px;
-    margin: 0 95px;
-    font-family: MontserratMedium;
+    margin: 0 96px 296px 96px;
+    font-family: MontserratSemiBold;
 }
 .headerItem {
     flex-grow: 1;

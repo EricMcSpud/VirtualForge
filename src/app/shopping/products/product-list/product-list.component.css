@@ -1,0 +1,22 @@
+.contentContainer {
+    display: flex;
+    margin: 0 96px;
+    padding-top: 24px;
+}
+.contentContainer > .main {
+    flex-grow: 1;
+}
+.contentContainer > .aside {
+    width: 318px;
+    min-width: 318px;
+}
+
+.sortContainer {
+    height: 92px;
+}
+
+.listContainer {
+    display: flex;
+    justify-items: flex-start;
+    flex-wrap: wrap;
+}

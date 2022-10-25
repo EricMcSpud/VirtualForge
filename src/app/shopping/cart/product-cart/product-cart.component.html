@@ -1,0 +1,29 @@
+<div class="cartContainer">
+    <div class="titleContainer">
+        <div class="cartTitle">
+            cart
+        </div>
+        <div class="totalItems">{{ currentCartQuantity }}</div>
+    </div>
+    <div class="productListContainer">
+        <ng-container *ngFor="let product of currentCartProducts;">
+            <div class="productDescriptionContainer">
+                <div class="productDescription">{{ product.title }}</div>
+                <div class="productPrice">{{ product.variants[0].price | currency: '£' }}</div>
+            </div>
+            <div class="productVariantContainer">
+                <div class="productVariant">{{ product.variants[0].title }}</div>
+                <div class="productActionButton" (click)="onRemoveProduct(product.id)">remove</div>
+            </div>
+        </ng-container>
+    </div>
+    <div class="cartTotalContainer">
+        <div class="totalTitlesContainer">
+            <div class="totalTitle">Total</div>
+            <div class="totalSubtitle">Inc. £0 in taxes</div>
+        </div>
+        <div class="totalValueContainer">
+            <div class="totalValue">{{ currentCartValue | currency: '£'}}</div>
+        </div>
+    </div>
+</div>
