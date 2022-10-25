@@ -1,11 +1,8 @@
 <div class="contentContainer">
     <div class="main">
         <div class="sortContainer">
-            <select name="sortBy" (change)="onSortByChanged($event);">
-                <option value="priceHigh">Highest Price</option>
-                <option value="priceLow">Lowest Price</option>
-                <option value="alphaAZ">Title - A to Z</option>
-                <option value="alphaZA">Title - Z to A</option>
+            <select #sortBy name="sortBy" (change)="onSortByChanged(sortBy.value);">
+                <option *ngFor="let selectOption of sortByOptions;" value="{{ selectOption.value }}">{{ selectOption.description }}</option>
             </select>
         </div>
         <div class="listContainer">

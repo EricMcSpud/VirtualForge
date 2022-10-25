@@ -20,3 +20,14 @@
     justify-items: flex-start;
     flex-wrap: wrap;
 }
+
+select {
+    font-family: MontserratMedium;
+    font-size: 1rem;
+	padding: 8px;
+	outline: 0;
+	border: 1px solid #ccc;
+	box-shadow: none;
+	border-radius: 4px;
+    background-color: var(--card-background);
+}

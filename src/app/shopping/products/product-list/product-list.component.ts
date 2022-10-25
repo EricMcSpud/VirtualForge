@@ -5,6 +5,19 @@ import { ProductModel } from 'src/app/common/models/product-model';
 import { ProductListModel } from 'src/app/common/models/product-list-model';
 
 const PRODUCTS_KEY = 'list';
+const SORTBY_PRICEHIGH = 'priceHigh';
+const SORTBY_PRICELOW = 'priceLow';
+const SORTBY_TITLEAZ = 'titleAZ';
+const SORTBY_TITLEZA = 'titleZA';
+
+class SelectOption {
+  value: string;
+  description: string;
+  constructor( value: string, description: string) {
+    this.value = value;
+    this.description = description;
+  }
+}
 
 @Component({
   selector: 'app-product-list',
@@ -14,6 +27,13 @@ const PRODUCTS_KEY = 'list';
 export class ProductListComponent implements OnInit {
 
   availableProducts: Array<ProductModel> = new Array<ProductModel>();
+  sortByOptions: SelectOption[] = [
+    new SelectOption( SORTBY_PRICEHIGH, 'Highest Price'),
+    new SelectOption( SORTBY_PRICELOW, 'Lowest Price'),
+    new SelectOption( SORTBY_TITLEAZ, 'Title - A to Z'),
+    new SelectOption( SORTBY_TITLEZA, 'Title - Z to A')
+  ];
+  sortByValue: string = SORTBY_PRICEHIGH;
 
   constructor( private productService: ProductService) { }
 
@@ -29,6 +49,6 @@ export class ProductListComponent implements OnInit {
   }
 
   onSortByChanged( value: any): void {
-    let x = 6;
+    this.sortByValue = value;
   }
 }

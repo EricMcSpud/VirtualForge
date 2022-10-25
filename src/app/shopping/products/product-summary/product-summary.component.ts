@@ -11,9 +11,16 @@ export class ProductSummaryComponent implements OnInit {
 
   @Input() product: ProductModel | null = null;
 
+  defaultProductImage = '';
+  defaultProductPrice = 0;
+
   constructor( private cartService: CartService) { }
 
   ngOnInit(): void {
+    if ( this.product) {
+      this.defaultProductImage = (this.product.variants[0].featured_image) ? this.product.variants[0].featured_image.src : this.product.images[0].src;
+      this.defaultProductPrice = +this.product.variants[0].price;
+    }
   }
 
   onAddToCart( product: ProductModel | null): void {
