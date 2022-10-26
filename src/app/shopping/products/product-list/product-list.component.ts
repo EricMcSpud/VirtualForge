@@ -3,12 +3,9 @@ import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../product.service';
 import { ProductModel } from 'src/app/common/models/product-model';
 import { ProductListModel } from 'src/app/common/models/product-list-model';
+import { SortTypes } from 'src/app/common/utils/sort-types';
 
 const PRODUCTS_KEY = 'list';
-const SORTBY_PRICEHIGH = 'priceHigh';
-const SORTBY_PRICELOW = 'priceLow';
-const SORTBY_TITLEAZ = 'titleAZ';
-const SORTBY_TITLEZA = 'titleZA';
 
 class SelectOption {
   value: string;
@@ -28,12 +25,12 @@ export class ProductListComponent implements OnInit {
 
   availableProducts: Array<ProductModel> = new Array<ProductModel>();
   sortByOptions: SelectOption[] = [
-    new SelectOption( SORTBY_PRICEHIGH, 'Highest Price'),
-    new SelectOption( SORTBY_PRICELOW, 'Lowest Price'),
-    new SelectOption( SORTBY_TITLEAZ, 'Title - A to Z'),
-    new SelectOption( SORTBY_TITLEZA, 'Title - Z to A')
+    new SelectOption( SortTypes.SORTBY_PRICEHIGH, 'Highest Price'),
+    new SelectOption( SortTypes.SORTBY_PRICELOW, 'Lowest Price'),
+    new SelectOption( SortTypes.SORTBY_TITLEAZ, 'Title - A to Z'),
+    new SelectOption( SortTypes.SORTBY_TITLEZA, 'Title - Z to A')
   ];
-  sortByValue: string = SORTBY_PRICEHIGH;
+  sortByType: string = SortTypes.SORTBY_PRICEHIGH;
 
   constructor( private productService: ProductService) { }
 
@@ -43,12 +40,12 @@ export class ProductListComponent implements OnInit {
         this.availableProducts = list.products;
       },
       error: (err: Error) => {
-        console.error(`ProductListComponent; failed to acquire list list because: ${err.message}.`);
+        console.error(`ProductListComponent; failed to acquire product list because: ${err.message}.`);
       }
     });
   }
 
   onSortByChanged( value: any): void {
-    this.sortByValue = value;
+    this.sortByType = value;
   }
 }

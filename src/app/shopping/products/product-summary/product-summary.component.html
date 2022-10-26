@@ -4,7 +4,7 @@
     </div>
     <div class="productDescriptionContainer">
         <div class="productDescription">{{ product?.title }}</div>
-        <div class="productPrice">{{ defaultProductPrice | currency: '£' }}</div>
+        <div class="productPrice">{{ defaultProductPrice | productPrice }}</div>
     </div>
     <div class="buttonContainer">
         <div class="button action" (click)="onAddToCart(product);">

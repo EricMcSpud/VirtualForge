@@ -6,7 +6,7 @@
             </select>
         </div>
         <div class="listContainer">
-            <app-product-summary *ngFor="let product of availableProducts;" [product]="product"></app-product-summary>
+            <app-product-summary *ngFor="let product of availableProducts | productSorter: sortByType" [product]="product"></app-product-summary>
         </div>
     </div>
     <div class="aside">

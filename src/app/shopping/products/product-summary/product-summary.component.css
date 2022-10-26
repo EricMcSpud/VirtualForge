@@ -45,6 +45,7 @@
 .productPrice {
     width: 76px;
     min-width: 76px;
+    text-align: right;
 }
 
 .buttonContainer {

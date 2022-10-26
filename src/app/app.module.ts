@@ -9,6 +9,8 @@ import { FooterComponent } from './common/footer/footer.component';
 import { ProductListComponent } from './shopping/products/product-list/product-list.component';
 import { ProductSummaryComponent } from './shopping/products/product-summary/product-summary.component';
 import { ProductCartComponent } from './shopping/cart/product-cart/product-cart.component';
+import { ProductSorterPipe } from './common/pipes/product-sorter.pipe';
+import { ProductPricePipe } from './common/pipes/product-price.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { ProductCartComponent } from './shopping/cart/product-cart/product-cart.
     FooterComponent,
     ProductListComponent,
     ProductSummaryComponent,
-    ProductCartComponent
+    ProductCartComponent,
+    ProductSorterPipe,
+    ProductPricePipe
   ],
   imports: [
     BrowserModule,

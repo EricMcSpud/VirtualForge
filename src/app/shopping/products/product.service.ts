@@ -5,13 +5,13 @@ import { environment } from '../../../environments/environment';
 
 import { ProductListModel } from 'src/app/common/models/product-list-model';
 
-/**
- * The ProductService implements a simple HTTP getter to acquire a list of
- * products from the configured back-end endpoint.
- */
-
 const defaultProductUrl = 'https://efuktshirts.com/products.json';
 
+/**
+ * The ProductService implements a simple HTTP getter to acquire a list of
+ * products from the configured back-end endpoint. An override endpoint URL
+ * can also be declared in the enviroment configs.
+ */
 @Injectable({
   providedIn: 'root'
 })

@@ -48,6 +48,7 @@
 .productPrice {
     width: 64px;
     min-width: 64px;
+    text-align: right;
 }
 
 .productVariantContainer {
